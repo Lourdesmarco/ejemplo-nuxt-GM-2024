@@ -10,6 +10,9 @@
             <li>
                 <NuxtLink to="/users">Usuarios (fetch)</NuxtLink>
             </li>
+            <li>
+                <NuxtLink to="/games">Juegos (fetch)</NuxtLink>
+            </li>
         </ul>
         
         <button 

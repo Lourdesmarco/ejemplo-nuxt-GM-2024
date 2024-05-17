@@ -37,7 +37,6 @@
             })
         })
         emit("closeModal", "logged");
-        //console.log(responseData.value.token)
     }
     const handleCancel = () => {
         emit("closeModal");

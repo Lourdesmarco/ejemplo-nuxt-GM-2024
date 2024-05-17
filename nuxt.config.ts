@@ -16,5 +16,15 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss', 
     'nuxt-icon',
     '@nuxtjs/google-fonts'
-  ]
+  ],
+  routeRules: { 
+    '/web/v1/**': { 
+        proxy: { 
+          to: "http://localhost:9300/web/v1/**"
+        }, 
+    } 
+  }
 })
+
+
+
