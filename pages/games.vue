@@ -6,7 +6,7 @@
             <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta laudantium minima, quis porro sint eveniet nobis sequi mollitia quibusdam consectetur culpa, earum maxime omnis pariatur vero cum, suscipit tenetur velit.
             </p>
-            <section class="container cards-section">
+            <section class="container cards-section" v-if="data.results != null">
                 <game-card 
                     v-for="(game, index) in data.results"
                     :key="index"
@@ -20,8 +20,7 @@
 
 
 <script setup>
-    const { data } = await useFetch('https://api.rawg.io/api/games?key=d45f1e8e88654d059e56f179e27d9327', {
-        lazy: true,
-        server: false
-    })
+  const { data } = useFetch('https://api.rawg.io/api/games?key=d45f1e8e88654d059e56f179e27d9327')
 </script>
+
+
