@@ -1,6 +1,6 @@
 <template>
     <div>
-        <form @submit.prevent="submitForm">
+        <form @submit.prevent="submitForm" class="modal">
             <div>
                 <label for="name">Name</label>
                 <input type="text" v-model="formData.name" id="name" placeholder="eg. John98" />
@@ -42,3 +42,16 @@
         emit("closeModal");
     }
 </script>
+
+<style lang="postcss">
+.modal{
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background-color: white;
+    @apply p-4;
+    button{
+        @apply p-4;
+    }
+}
+</style>

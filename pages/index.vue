@@ -2,9 +2,7 @@
     <main>
         <header-image :source="'https://picsum.photos/1024/200?grayscale'" />
         <section class="container">
-            <h1>
-                <Icon name="noto-v1:beaming-face-with-smiling-eyes" />
-                {{title}}</h1>
+            <h1>{{title}}</h1>
             <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta laudantium minima, quis porro sint eveniet nobis sequi mollitia quibusdam consectetur culpa, earum maxime omnis pariatur vero cum, suscipit tenetur velit.
             </p>
@@ -48,13 +46,12 @@
 
 <style lang="postcss">
     .cards-section{
-        display: flex;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-gap: 20px;
         article{
             border: 2px solid black;
-            width: 20vw;
+            width: 100%;
         }
         
      

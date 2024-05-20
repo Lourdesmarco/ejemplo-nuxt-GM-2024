@@ -2,20 +2,35 @@
     <nav>
         <ul>
             <li>
-                <NuxtLink to="/">Home</NuxtLink>
+                <NuxtLink to="/">
+                    <Icon name="noto-v1:house" />
+                    <span class="nav-item-text">Home</span>
+                </NuxtLink>
             </li>
             <li>
-                <NuxtLink to="/about">About</NuxtLink>
+                <NuxtLink to="/about">
+                    <Icon name="noto-v1:beaming-face-with-smiling-eyes" />
+                    <span class="nav-item-text">About</span>
+                </NuxtLink>
             </li>
             <li>
-                <NuxtLink to="/users">Usuarios (fetch)</NuxtLink>
+                <NuxtLink to="/users">
+                    <Icon name="noto-v1:busts-in-silhouette" />
+                    <span class="nav-item-text">Usuarios (fetch)</span>
+                    
+                </NuxtLink>
             </li>
             <li>
-                <NuxtLink to="/games">Juegos (fetch)</NuxtLink>
+                <NuxtLink to="/games">
+                    <Icon name="noto-v1:video-game" />
+                    <span class="nav-item-text">Juegos (fetch)</span>
+                    
+                </NuxtLink>
             </li>
         </ul>
         
         <button 
+            class="btn-login"
             v-if="!logged && !modalActive"
             @click="modalActive = !modalActive"
         >
@@ -78,7 +93,16 @@
                 &.router-link-active{
                     border-bottom: 3px solid black;
                 }
+                .nav-item-text{
+                    margin-left: 5px;
+                    @media (max-width: 800px){
+                        display: none;
+                    }
+                }
             }
+        }
+        .btn-login{
+            @apply p-4;
         }
     }
     .user{
