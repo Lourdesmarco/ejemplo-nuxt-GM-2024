@@ -6,7 +6,7 @@
             <p>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta laudantium minima, quis porro sint eveniet nobis sequi mollitia quibusdam consectetur culpa, earum maxime omnis pariatur vero cum, suscipit tenetur velit.
             </p>
-            <section class="container cards-section" v-if="data.results != null">
+            <section class="container cards-section" v-if="data != null">
                 <game-card 
                     v-for="(game, index) in data.results"
                     :key="index"
